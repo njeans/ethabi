@@ -1,7 +1,7 @@
 use {Hash, Token, Bytes};
 
-use alloc::vec::Vec;
-use alloc::string::String;
+use std::vec::Vec;
+use std::string::String;
 
 /// Ethereum log.
 #[derive(Debug, PartialEq)]
