@@ -1,3 +1,10 @@
+/*
+use alloc::string::String;
+use alloc::boxed::Box;
+*/
+use std::string::String;
+use std::boxed::Box;
+use std::borrow::ToOwned;
 use {ParamType, Error, ErrorKind};
 
 /// Used to convert param type represented as a string to rust structure.

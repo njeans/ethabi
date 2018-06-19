@@ -2,7 +2,12 @@ use serde::{Serialize, Serializer};
 use serde_json::Value;
 use hex::ToHex;
 use {Hash, Token};
-
+use std::vec::Vec;
+use std::vec;
+/*
+use alloc::vec::Vec;
+use alloc::vec;
+*/
 /// Raw topic filter.
 #[derive(Debug, PartialEq, Default)]
 pub struct RawTopicFilter {

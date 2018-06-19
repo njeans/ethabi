@@ -1,7 +1,10 @@
 //! Function and event param types.
 
 use std::fmt;
+//use alloc::fmt;
 use super::Writer;
+//use alloc::boxed::Box;
+use std::boxed::Box;
 
 /// Function and event param types.
 #[derive(Debug, Clone, PartialEq)]

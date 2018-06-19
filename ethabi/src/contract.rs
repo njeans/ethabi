@@ -1,11 +1,20 @@
 use std::{io, fmt};
 use std::collections::HashMap;
 use std::collections::hash_map::Values;
+/*use alloc::{io, fmt};
+use alloc::collections::HashMap;
+use alloc::collections::hash_map::Values;*/
 use serde::{Deserialize, Deserializer};
 use serde::de::{Visitor, SeqAccess};
 use serde_json;
 use operation::Operation;
 use {errors, ErrorKind, Event, Constructor, Function};
+use std::string::String;
+use std::vec::Vec;
+use std::borrow::ToOwned;
+/*
+use alloc::string::String;
+use alloc::vec::Vec;*/
 
 /// API building calls to contracts ABI.
 #[derive(Clone, Debug, PartialEq)]

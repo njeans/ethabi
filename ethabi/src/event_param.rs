@@ -1,6 +1,8 @@
 //! Event param specification.
 
 use {ParamType};
+use std::string::String;
+//use alloc::string::String;
 
 /// Event param specification.
 #[derive(Debug, Clone, PartialEq, Deserialize)]

@@ -2,6 +2,8 @@
 
 use util::pad_u32;
 use {Token, Hash, Bytes};
+use std::vec::Vec;
+//use alloc::vec::Vec;
 
 fn pad_bytes(bytes: &[u8]) -> Vec<[u8; 32]> {
 	let mut result = vec![pad_u32(bytes.len() as u32)];

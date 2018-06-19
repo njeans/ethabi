@@ -2,7 +2,12 @@
 
 use util::slice_data;
 use {Token, ErrorKind, Error, ResultExt, ParamType};
-
+use std::vec::Vec;
+use std::string::String;
+/*
+use alloc::vec::Vec;
+use alloc::string::String;
+*/
 struct DecodeResult {
 	token: Token,
 	new_offset: usize,

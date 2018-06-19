@@ -1,5 +1,8 @@
 use {Hash, Token, Bytes};
 
+use alloc::vec::Vec;
+use alloc::string::String;
+
 /// Ethereum log.
 #[derive(Debug, PartialEq)]
 pub struct RawLog {

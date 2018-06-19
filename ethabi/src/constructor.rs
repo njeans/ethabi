@@ -1,5 +1,7 @@
 //! Contract constructor call builder.
 use {Param, Result, ErrorKind, Token, ParamType, encode, Bytes};
+use std::vec::Vec;
+//use alloc::vec::Vec;
 
 /// Contract constructor specification.
 #[derive(Debug, Clone, PartialEq, Deserialize)]

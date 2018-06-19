@@ -5,6 +5,8 @@ use serde::de::{Error as SerdeError};
 use serde_json::Value;
 use serde_json::value::from_value;
 use {Function, Constructor, Event};
+use std::string::String;
+use std::string::ToString;
 
 /// Operation type.
 #[derive(Clone, Debug, PartialEq)]

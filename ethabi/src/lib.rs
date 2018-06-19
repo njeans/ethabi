@@ -1,7 +1,16 @@
 //! Ethereum ABI encoding decoding library.
-
 #![warn(missing_docs)]
+#![no_std]
 
+#![feature(slice_concat_ext)]
+
+#[macro_use]
+extern crate sgx_tstd as std;
+/*
+#![feature(alloc)]
+#[macro_use]
+extern crate alloc;
+*/
 extern crate rustc_hex as hex;
 extern crate serde;
 extern crate serde_json;
@@ -14,6 +23,9 @@ extern crate serde_derive;
 extern crate error_chain;
 
 extern crate ethereum_types;
+
+use std::vec::Vec;
+//use alloc::vec::Vec;
 
 pub mod param_type;
 pub mod token;
@@ -29,7 +41,7 @@ mod function;
 mod log;
 mod operation;
 mod param;
-mod signature;
+pub mod signature;
 mod util;
 
 pub use param_type::ParamType;

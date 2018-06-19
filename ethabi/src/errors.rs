@@ -2,7 +2,15 @@
 #![allow(missing_docs)]
 
 use std::{num, string};
+//use alloc::{num, string};
 use {serde_json, hex};
+use std::string::String;
+use std::boxed::Box;
+use std::string::ToString;
+/*
+use alloc::string::String;
+use alloc::boxed::Box;
+*/
 
 error_chain! {
 	foreign_links {

@@ -1,8 +1,17 @@
 //! Ethereum ABI params.
 use std::fmt;
+//use alloc::fmt;
 use hex::ToHex;
 use {ParamType, Address, FixedBytes, Bytes, Uint};
-
+use std::vec::Vec;
+use std::string::String;
+use std::vec;
+use std::slice::SliceConcatExt;
+/*
+use alloc::vec::Vec;
+use alloc::string::String;
+use alloc::vec;
+*/
 /// Ethereum ABI params.
 #[derive(Debug, PartialEq, Clone)]
 pub enum Token {

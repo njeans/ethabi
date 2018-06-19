@@ -1,6 +1,7 @@
 //! Contract event.
 
 use std::collections::HashMap;
+//use alloc::collections::HashMap;
 use tiny_keccak::keccak256;
 use signature::long_signature;
 use {
@@ -8,6 +9,13 @@ use {
 	Topic, ParamType, EventParam, encode, decode, Token,
 	Result, ErrorKind
 };
+
+use std::vec::Vec;
+use std::string::String;
+/*
+use alloc::vec::Vec;
+use alloc::string::String;
+*/
 
 /// Contract event.
 #[derive(Clone, Debug, PartialEq, Deserialize)]

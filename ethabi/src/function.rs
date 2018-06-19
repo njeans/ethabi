@@ -2,7 +2,12 @@
 
 use signature::short_signature;
 use {Param, Token, Result, ErrorKind, Bytes, decode, ParamType, encode};
-
+use std::vec::Vec;
+use std::string::String;
+/*
+use alloc::vec::Vec;
+use alloc::string::String;
+*/
 /// Contract function specification.
 #[derive(Debug, Clone, PartialEq, Deserialize)]
 pub struct Function {
