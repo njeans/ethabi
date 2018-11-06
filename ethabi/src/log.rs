@@ -1,4 +1,21 @@
-use {Hash, Token, Bytes};
+use {Hash, Token, Bytes, Result, TopicFilter};
+
+/// Common filtering functions that are available for any event.
+pub trait LogFilter {
+	/// Match any log parameters.
+	fn wildcard_filter(&self) -> TopicFilter;
+}
+
+/// trait common to things (events) that have an associated `Log` type
+/// that can be parsed from a `RawLog`
+pub trait ParseLog {
+	/// the associated `Log` type that can be parsed from a `RawLog`
+	/// by calling `parse_log`
+	type Log;
+
+	/// parse the associated `Log` type from a `RawLog`
+	fn parse_log(&self, log: RawLog) -> Result<Self::Log>;
+}
 
 use std::vec::Vec;
 use std::string::String;
