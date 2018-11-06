@@ -4,7 +4,7 @@ use serde_json::Value;
 use hex::ToHex;
 use {Hash, Token};
 use std::vec::Vec;
-use std::vec;
+use std::string::String;
 /*
 use alloc::vec::Vec;
 use alloc::vec;
