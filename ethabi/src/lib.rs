@@ -12,12 +12,11 @@ extern crate sgx_tstd as std;
 extern crate alloc;
 */
 extern crate rustc_hex as hex;
-extern crate serde;
 extern crate serde_json;
 extern crate tiny_keccak;
 
 #[macro_use]
-extern crate serde_derive;
+extern crate serde;
 
 #[macro_use]
 extern crate error_chain;

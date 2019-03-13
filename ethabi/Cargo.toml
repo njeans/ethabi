@@ -7,27 +7,17 @@ license = "MIT"
 keywords = ["ethereum", "eth", "abi", "solidity", "cli"]
 description = "Easy to use conversion of ethereum contract calls to bytecode."
 
-[target.'cfg(not(target_env = "sgx"))'.dependencies.sgx_tstd]
-git = "https://github.com/baidu/rust-sgx-sdk.git"
-rev = "v1.0.4"
-
-[target.'cfg(not(target_env = "sgx"))'.dependencies.serde_json]
-git = "https://github.com/baidu/rust-sgx-sdk.git"
-rev = "v1.0.4"
-
-[target.'cfg(not(target_env = "sgx"))'.dependencies.serde_derive]
-git = "https://github.com/baidu/rust-sgx-sdk.git"
-rev = "v1.0.4"
-
-[target.'cfg(not(target_env = "sgx"))'.dependencies.serde]
-git = "https://github.com/baidu/rust-sgx-sdk.git"
-rev = "v1.0.4"
-
 [dependencies]
-rustc-hex = { git = "https://github.com/enigmampc/rustc-hex.git", rev = "sgx-2.0.1-v1.0.4" }
+rustc-hex = { git = "https://github.com/enigmampc/rustc-hex.git", rev = "sgx-2.0.1-v1.0.6" }
 tiny-keccak = "1.3"
-error-chain = { git = "https://github.com/enigmampc/error-chain.git", rev = "sgx-0.12.0", default-features = false }
+error-chain = { git = "https://github.com/enigmampc/error-chain.git", rev = "sgx-0.12.0-v1.0.6", default-features = false }
 ethereum-types = { git = "https://github.com/enigmampc/primitives.git", rev = "sgx-v0.4.0", default-features = false }
+
+serde = { git = "https://github.com/baidu/rust-sgx-sdk.git", rev = "v1.0.6", features = ["derive"] }
+serde_json = { git = "https://github.com/baidu/rust-sgx-sdk.git", rev = "v1.0.6" }
+sgx_tstd = { git = "https://github.com/baidu/rust-sgx-sdk.git", rev = "v1.0.6" }
+
+
 
 [dev-dependencies]
 hex-literal = "0.1.1"
@@ -38,5 +28,6 @@ backtrace = ["error-chain/backtrace"]
 [badges]
 travis-ci = { repository = "paritytech/ethabi", branch = "master" }
 coveralls = { repository = "paritytech/ethabi", branch = "master" }
+
 
 
