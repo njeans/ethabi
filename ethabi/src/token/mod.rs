@@ -8,7 +8,12 @@ use {ParamType, Error, ErrorKind, ResultExt};
 pub use self::lenient::LenientTokenizer;
 pub use self::strict::StrictTokenizer;
 pub use self::token::Token;
-
+pub use std::vec::Vec;
+pub use std::string::String;
+/*
+pub use alloc::vec::Vec;
+pub use alloc::string::String;
+*/
 /// This trait should be used to parse string values as tokens.
 pub trait Tokenizer {
 	/// Tries to parse a string as a token of given type.

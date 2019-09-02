@@ -8,13 +8,16 @@ keywords = ["ethereum", "eth", "abi", "solidity", "cli"]
 description = "Easy to use conversion of ethereum contract calls to bytecode."
 
 [dependencies]
-rustc-hex = "2.0"
-serde = "1.0"
-serde_json = "1.0"
-serde_derive = "1.0"
+ rustc-hex = { git = "https://github.com/enigmampc/rustc-hex.git", rev = "2.0.1-sgx-1.0.8" }
 tiny-keccak = "1.4"
-error-chain = { version = "0.12", default-features = false }
-ethereum-types = "0.6.0"
+error-chain = { git = "https://github.com/enigmampc/error-chain.git", rev = "0.12.0-sgx-1.0.8",  default-features = false }
+ethereum-types = { git = "https://github.com/enigmampc/primitives.git", rev = "0.5.2-sgx-v0.4.0", default-features = false }
+
+serde = { git = "https://github.com/mesalock-linux/serde-sgx.git", rev = "407aaaa2558dda5c2367d57ba40324c52cf9acc2", features = ["derive"] }
+serde_json = { git = "https://github.com/enigmampc/serde-json-sgx.git", rev = "1.0.39-sgx-1.0.8" }
+sgx_tstd = { git = "https://github.com/baidu/rust-sgx-sdk.git", rev = "v1.0.8" }
+
+
 
 [dev-dependencies]
 hex-literal = "0.2.0"

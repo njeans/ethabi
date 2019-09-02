@@ -1,6 +1,8 @@
 //! Utils used by different modules.
 
 use {Word, Error, ErrorKind};
+use std::vec::Vec;
+//use alloc::vec::Vec;
 
 /// Convers vector of bytes with len equal n * 32, to a vector of slices.
 pub fn slice_data(data: &[u8]) -> Result<Vec<Word>, Error> {

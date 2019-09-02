@@ -1,7 +1,13 @@
 use hex::FromHex;
 use token::Tokenizer;
 use errors::{Error, ErrorKind};
+use std::vec::Vec;
+use std::string::String;
+use std::borrow::ToOwned;
 
+/*use alloc::vec::Vec;
+use alloc::string::String;
+*/
 /// Tries to parse string as a token. Require string to clearly represent the value.
 pub struct StrictTokenizer;
 

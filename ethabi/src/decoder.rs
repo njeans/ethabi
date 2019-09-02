@@ -2,7 +2,8 @@
 
 use util::slice_data;
 use {Word, Token, ErrorKind, Error, ResultExt, ParamType};
-
+use std::vec::Vec;
+use std::string::String;
 struct DecodeResult {
 	token: Token,
 	new_offset: usize,
@@ -41,7 +42,7 @@ pub fn decode(types: &[ParamType], data: &[u8]) -> Result<Vec<Token>, Error> {
         bail!("please ensure the contract and method you're calling exist! failed to decode empty bytes. if you're using jsonrpc this is likely due to jsonrpc returning `0x` in case contract or method don't exist");
     }
 	let slices = slice_data(data)?;
-	let mut tokens = Vec::with_capacity(types.len());
+    let mut tokens = Vec::with_capacity(types.len());
 	let mut offset = 0;
 	for param in types {
 		let res = decode_param(param, &slices, offset).chain_err(|| format!("Cannot decode {}", param))?;

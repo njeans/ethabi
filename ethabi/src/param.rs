@@ -1,5 +1,7 @@
 //! Function param.
 use ParamType;
+use std::string::String;
+//use alloc::string::String;
 
 /// Function param.
 #[derive(Debug, Clone, PartialEq, Deserialize)]
