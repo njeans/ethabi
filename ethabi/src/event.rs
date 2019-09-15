@@ -151,7 +151,7 @@ impl Event {
 
 		let flat_topics = topics.into_iter()
 			.skip(to_skip)
-			.flat_map(|t| t.to_vec())
+			.flat_map(|t| t.as_bytes().to_vec())
 			.collect::<Vec<u8>>();
 
 		let topic_tokens = try!(decode(&topic_types, &flat_topics));

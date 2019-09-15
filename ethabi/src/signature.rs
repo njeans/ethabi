@@ -3,7 +3,7 @@ use param_type::{Writer, ParamType};
 use Hash;
 use std::vec::Vec;
 use std::string::String;
-use std::slice::SliceConcatExt;
+use slice_concat_ext::SliceConcatExt;
 
 pub fn short_signature(name: &str, params: &[ParamType]) -> [u8; 4] {
 	let mut result = [0u8; 4];

@@ -8,14 +8,14 @@ keywords = ["ethereum", "eth", "abi", "solidity", "cli"]
 description = "Easy to use conversion of ethereum contract calls to bytecode."
 
 [dependencies]
- rustc-hex = { git = "https://github.com/enigmampc/rustc-hex.git", rev = "2.0.1-sgx-1.0.8" }
+ rustc-hex = { git = "https://github.com/enigmampc/rustc-hex.git", rev = "2.0.1-sgx-1.0.9" }
 tiny-keccak = "1.4"
-error-chain = { git = "https://github.com/enigmampc/error-chain.git", rev = "0.12.0-sgx-1.0.8",  default-features = false }
-ethereum-types = { git = "https://github.com/enigmampc/primitives.git", rev = "sgx-v0.4.0", default-features = false }
+error-chain = { git = "https://github.com/enigmampc/error-chain.git", rev = "0.12.0-sgx-1.0.9",  default-features = false }
+ethereum-types = { git = "https://github.com/enigmampc/parity-common.git", rev = "0.7.0-sgx-1.0.9", default-features = false }
 
-serde = { git = "https://github.com/mesalock-linux/serde-sgx.git", rev = "407aaaa2558dda5c2367d57ba40324c52cf9acc2", features = ["derive"] }
-serde_json = { git = "https://github.com/enigmampc/serde-json-sgx.git", rev = "1.0.39-sgx-1.0.8" }
-sgx_tstd = { git = "https://github.com/baidu/rust-sgx-sdk.git", rev = "v1.0.8" }
+serde = { git = "https://github.com/mesalock-linux/serde-sgx.git", rev = "81f47e78242de4fcccafbeb78d5250616a85c7c4", features = ["derive"] }
+serde_json = { git = "https://github.com/enigmampc/serde-json-sgx.git", rev = "1.0.39-sgx-1.0.9" }
+sgx_tstd = { git = "https://github.com/baidu/rust-sgx-sdk.git", rev = "v1.0.9" }
 
 
 

@@ -6,7 +6,8 @@ use {ParamType, Address, FixedBytes, Bytes, Uint};
 use std::vec::Vec;
 use std::string::String;
 use std::vec;
-use std::slice::SliceConcatExt;
+
+use slice_concat_ext::SliceConcatExt;
 /*
 use alloc::vec::Vec;
 use alloc::string::String;

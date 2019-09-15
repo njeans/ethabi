@@ -49,6 +49,7 @@ mod operation;
 mod param;
 pub mod signature;
 mod util;
+mod slice_concat_ext;
 
 #[cfg(test)]
 mod tests;
