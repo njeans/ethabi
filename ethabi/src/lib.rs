@@ -2,7 +2,7 @@
 #![warn(missing_docs)]
 #![no_std]
 
-#![feature(slice_concat_ext)]
+#![feature(slice_concat_trait)]
 
 #[macro_use]
 extern crate sgx_tstd as std;
@@ -49,7 +49,6 @@ mod operation;
 mod param;
 pub mod signature;
 mod util;
-mod slice_concat_ext;
 
 #[cfg(test)]
 mod tests;

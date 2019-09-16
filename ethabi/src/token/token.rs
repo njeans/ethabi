@@ -7,7 +7,7 @@ use std::vec::Vec;
 use std::string::String;
 use std::vec;
 
-use slice_concat_ext::SliceConcatExt;
+use std::slice::Join;
 /*
 use alloc::vec::Vec;
 use alloc::string::String;
