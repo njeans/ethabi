@@ -13,8 +13,8 @@ tiny-keccak = "1.4"
 error-chain = { git = "https://github.com/enigmampc/error-chain.git", rev = "0.12.0-sgx-1.0.9",  default-features = false }
 ethereum-types = { git = "https://github.com/enigmampc/parity-common.git", rev = "0.7.0-sgx-1.0.9", default-features = false }
 
-serde = { git = "https://github.com/mesalock-linux/serde-sgx.git", rev = "bc160eaaa364448e0831c6fbfc9c77cbf59f09db", features = ["derive"] }
-serde_json = { git = "https://github.com/enigmampc/serde-json-sgx.git", rev = "1.0.39-sgx-1.0.9" }
+serde = { git = "https://github.com/mesalock-linux/serde-sgx.git", features = ["derive"] }
+serde_json = { git = "https://github.com/mesalock-linux/serde-json-sgx.git", rev = "sgx_1.0.9" }
 sgx_tstd = { git = "https://github.com/baidu/rust-sgx-sdk.git", rev = "v1.0.9" }
 
 
