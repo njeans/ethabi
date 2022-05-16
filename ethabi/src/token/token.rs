@@ -6,7 +6,7 @@ use {ParamType, Address, FixedBytes, Bytes, Uint};
 use std::vec::Vec;
 use std::string::String;
 use std::vec;
-
+use ethereum_types;
 use std::slice::Join;
 /*
 use alloc::vec::Vec;
@@ -40,7 +40,7 @@ pub enum Token {
 	/// Unisnged integer.
 	///
 	/// solidity name: uint
-	Uint(Uint),
+	Uint(ethereum_types::U256),
 	/// Boolean value.
 	///
 	/// solidity name: bool
@@ -160,7 +160,7 @@ impl Token {
 	}
 
 	/// Converts token to...
-	pub fn to_int(self) -> Option<Uint> {
+	pub fn to_int(self) -> Option<ethereum_types::U256> {
 		match self {
 			Token::Int(int) => Some(int),
 			_ => None,
@@ -168,7 +168,7 @@ impl Token {
 	}
 
 	/// Converts token to...
-	pub fn to_uint(self) -> Option<Uint> {
+	pub fn to_uint(self) -> Option<ethereum_types::U256> {
 		match self {
 			Token::Uint(uint) => Some(uint),
 			_ => None,
